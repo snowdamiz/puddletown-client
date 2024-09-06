@@ -1,83 +1,90 @@
+@import '../../App.scss';
+
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: 4px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   background-color: #fff;
 
-  @media (min-width: 450px) {
-    padding: 6px;
-  }
-
-  @media (min-width: 768px) {
-    padding: 8px;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 10px;
-  }
-
-  .logo {
-    margin-left: 4px;
-    margin-top: 3px;
-    height: 40px;
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4px 12px;
 
     @media (min-width: 450px) {
-      height: 42px;
+      padding: 6px 12px;
     }
-
+  
     @media (min-width: 768px) {
-      height: 46px;
+      padding: 8px 12px;
     }
-
+  
     @media (min-width: 1024px) {
-      height: 50px;
+      padding: 12px 12px;
     }
 
     @media (min-width: 1440px) {
-      height: 54px;
+      max-width: 1440px;
+      padding: 14px 12px;
     }
-  }
 
-  nav {
-    display: flex;
-    margin-right: 23px;
+    .logo {
+      margin-left: -6px;
+      height: 40px;
+  
+      @media (min-width: 450px) {
+      }
+  
+      @media (min-width: 768px) {
+      }
+  
+      @media (min-width: 1024px) {
+        height: 44px;
+      }
+  
+      @media (min-width: 1440px) {
+        height: 46px;
+      }
+    }
+  
+    .right {
+      display: flex;
 
-    a {
-      .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 14px;
-        width: 70px;
-        position: relative;
+      @media (min-width: 768px) {
+        gap: 10px;
+      }
+  
+      @media (min-width: 1024px) {
+        gap: 12px;
+      }
+  
+      @media (min-width: 1440px) {
+        gap: 14px;
+      }
+
+      button {
+        background-color: $primary300;
+        color: $white100;
+        font-weight: 900;
+        display: none;
+
+        @media (min-width: 768px) {
+          font-size: 0.75rem;
+          display: block;
+        }
+    
+        @media (min-width: 1024px) {
+          font-size: 0.9rem;
+        }
 
         &:hover {
-          img {
-            display: block;
-          }
-
-          span {
-            font-weight: 600;
-          }
-        }
-
-        span {
-          font-size: 1.1rem;
-          font-weight: 400;
-          color: #000;
-          z-index: 10000;
-        }
-
-        img {
-          display: none;
-          position: absolute;
-          height: 34px;
-          margin-left: -30px;
-          z-index: 1;
+          background-color: $black;
+          color: $white100;
         }
       }
     }
