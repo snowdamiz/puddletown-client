@@ -4,7 +4,7 @@ import linkThree from '../../assets/link-3.svg'
 import linkFour from '../../assets/link-4.svg'
 import linkFive from '../../assets/link-5.svg'
 import useHelpers from '../../hooks/useHelpers'
-import './Nav.scss'
+import './Nav.sass'
 
 export default function NavMain({ refs }) {
   const { navigate } = useHelpers()

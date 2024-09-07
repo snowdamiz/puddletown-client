@@ -21,7 +21,7 @@ export default function App() {
   return <main>
     { menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
     <Header refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} />
-    <section id="home" ref={homeRef}><Home /></section>
+    <section id="home" ref={homeRef}><Home refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]}/></section>
     <section id="services" ref={servicesRef}><Services /></section>
     <section id="about" ref={aboutRef}><About /></section>
     <section id="portfolio" ref={portfolioRef}><Portfolio /></section>
