@@ -61,7 +61,18 @@ header {
         gap: 14px;
       }
 
-      button {
+      .mobile-menu-btn {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        display: block;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+
+      .quote-btn {
         background-color: $primary300;
         color: $white100;
         font-weight: 900;
