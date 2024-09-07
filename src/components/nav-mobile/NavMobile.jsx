@@ -22,6 +22,7 @@ export default function NavMobile({ refs }) {
             <BiX size="28px" color="#000" />
           </button>
         </div>
+        <div className='divider' />
         <nav className='mobile-menu-nav'>
           <a href='#home' onClick={(e) => handleClick(e, refs[0]) }>
             <div className='mobile-link'>
@@ -49,7 +50,7 @@ export default function NavMobile({ refs }) {
             </div>
           </a>
         </nav>
-        <button className='quote-btn'>
+        <button className='mobile-quote-btn'>
           Get a Quote
         </button>
       </div>
