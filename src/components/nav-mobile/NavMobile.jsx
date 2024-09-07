@@ -1,21 +1,16 @@
 import { BiX } from "react-icons/bi";
 import { useStore } from '../../store'
+import useHelpers from '../../hooks/useHelpers'
 import './NavMobile.sass'
 
 export default function NavMobile({ refs }) {
   const { toggleMenu } = useStore((state) => state)
-
-  const scrollToSection = (ref) => {
-    console.log(ref)
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const { navigate } = useHelpers()
 
   const handleClick = (e, section) => {
     e.preventDefault()
     toggleMenu()
-    scrollToSection(section)
+    navigate(section)
   }
   
   return (
