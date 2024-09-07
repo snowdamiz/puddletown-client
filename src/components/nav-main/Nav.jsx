@@ -5,10 +5,17 @@ import linkFour from '../../assets/link-4.svg'
 import linkFive from '../../assets/link-5.svg'
 import './Nav.scss'
 
-export default function NavMain() {
+export default function NavMain({ refs }) {
+  const scrollToSection = (ref) => {
+    console.log(ref)
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <nav>
-      <a href='#'>
+      <a href='#home' onClick={(e) => { e.preventDefault(); scrollToSection(refs[0]) }}>
         <div className='link'>
           <span>Home</span>
           <img
@@ -17,7 +24,7 @@ export default function NavMain() {
           />
         </div>
       </a>
-      <a href='#'>
+      <a href='#services' onClick={(e) => { e.preventDefault(); scrollToSection(refs[1]) }}>
         <div className='link'>
           <span>Services</span>
           <img
@@ -26,7 +33,7 @@ export default function NavMain() {
           />
         </div>
       </a>
-      <a href='#'>
+      <a href='#about' onClick={(e) => { e.preventDefault(); scrollToSection(refs[2]) }}>
         <div className='link'>
           <span>About</span>
           <img 
@@ -35,7 +42,7 @@ export default function NavMain() {
           />
         </div>
       </a>
-      <a href='#'>
+      <a href='#portfolio' onClick={(e) => { e.preventDefault(); scrollToSection(refs[3]) }}>
         <div className='link'>
           <span>Portfolio</span>
           <img
@@ -44,7 +51,7 @@ export default function NavMain() {
           />
         </div>
       </a>
-      <a href='#'>
+      <a href='#contact' onClick={(e) => { e.preventDefault(); scrollToSection(refs[4]) }}>
         <div className='link'>
           <span>Contact</span>
           <img

@@ -3,7 +3,7 @@ import NavMain from '../nav-main/Nav'
 import logo from '../../assets/logo.svg'
 import './Header.scss'
 
-export default function Header() {
+export default function Header({ refs }) {
   return (
     <header>
       <div className='header-inner'>
@@ -13,7 +13,7 @@ export default function Header() {
           alt="Puddletown Painters logo"
         />
         <div className='right'>
-          <NavMain />
+          <NavMain refs={refs} />
           <button>
             Get a Quote
           </button>
