@@ -7,7 +7,7 @@ import Portfolio from './components/portfolio'
 import Contact from './components/contact'
 import NavMobile from './components/nav-mobile'
 import { useStore } from './store.ts'
-import './App.scss'
+import './App.sass'
 
 export default function App() {
   const { menuOpen } = useStore((state) => state)
@@ -18,13 +18,15 @@ export default function App() {
   const portfolioRef = useRef(null)
   const contactRef = useRef(null)
 
-  return <main>
-    { menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
+  return <>
     <Header refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} />
-    <section id="home" ref={homeRef}><Home refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]}/></section>
-    <section id="services" ref={servicesRef}><Services /></section>
-    <section id="about" ref={aboutRef}><About /></section>
-    <section id="portfolio" ref={portfolioRef}><Portfolio /></section>
-    <section id="contact" ref={contactRef}><Contact /></section>
-  </main>
+    <main>
+      { menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
+      <section id="home" ref={homeRef}><Home refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]}/></section>
+      <section id="services" ref={servicesRef}><Services /></section>
+      <section id="about" ref={aboutRef}><About /></section>
+      <section id="portfolio" ref={portfolioRef}><Portfolio /></section>
+      <section id="contact" ref={contactRef}><Contact /></section>
+    </main>
+  </>
 }

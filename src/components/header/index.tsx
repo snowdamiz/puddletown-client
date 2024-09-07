@@ -3,7 +3,7 @@ import NavMain from '@/components/nav-main'
 import { BiMenuAltRight } from "react-icons/bi";
 import logo from '@/assets/logo.svg'
 import { useStore } from '../../store.ts'
-import './Header.scss'
+import './Header.sass'
 
 export default function Header({ refs }) {
   const { toggleMenu } = useStore((state) => state)

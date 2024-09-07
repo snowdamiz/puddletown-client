@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import useHelpers from '@/hooks/useHelpers.ts'
+import useHelpers from '../../hooks/useHelpers.ts'
 import './Home.sass'
 
 function Home({ refs }: any) {
@@ -36,7 +36,7 @@ function Home({ refs }: any) {
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/5">
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <Card className="border-0 shadow-none">
                   <CardContent className="flex aspect-square items-center justify-center p-6">

@@ -1,4 +1,4 @@
-import './Services.scss'
+import './Services.sass'
 
 function Services() {
   return (
