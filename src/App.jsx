@@ -19,7 +19,7 @@ export default function App() {
   const contactRef = useRef(null)
 
   return <main>
-    { !menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
+    { menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
     <Header refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} />
     <section id="home" ref={homeRef}><Home /></section>
     <section id="services" ref={servicesRef}><Services /></section>
