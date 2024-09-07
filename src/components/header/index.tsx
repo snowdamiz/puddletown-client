@@ -1,7 +1,7 @@
 
-import NavMain from '../nav-main'
+import NavMain from '@/components/nav-main'
 import { BiMenuAltRight } from "react-icons/bi";
-import logo from '../../assets/logo.svg'
+import logo from '@/assets/logo.svg'
 import { useStore } from '../../store.ts'
 import './Header.scss'
 

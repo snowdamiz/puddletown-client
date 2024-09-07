@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import useHelpers from '../../hooks/useHelpers.ts'
+import useHelpers from '@/hooks/useHelpers.ts'
 import './Home.sass'
 
 function Home({ refs }: any) {

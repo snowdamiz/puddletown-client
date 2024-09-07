@@ -1,6 +1,6 @@
 import { BiX } from "react-icons/bi";
 import { useStore } from '../../store'
-import useHelpers from '../../hooks/useHelpers'
+import useHelpers from '@/hooks/useHelpers'
 import './NavMobile.sass'
 
 export default function NavMobile({ refs }) {
