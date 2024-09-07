@@ -1,8 +1,8 @@
 
-import NavMain from '../nav-main/Nav'
+import NavMain from '../nav-main'
 import { BiMenuAltRight } from "react-icons/bi";
 import logo from '../../assets/logo.svg'
-import { useStore } from '../../store'
+import { useStore } from '../../store.ts'
 import './Header.scss'
 
 export default function Header({ refs }) {
