@@ -20,8 +20,8 @@ export default function App() {
 
   return <>
     <Header refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} />
+    { menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
     <main>
-      { menuOpen && <NavMobile refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]} /> }
       <section id="home" ref={homeRef}><Home refs={[homeRef, servicesRef, aboutRef, portfolioRef, contactRef]}/></section>
       <section id="services" ref={servicesRef}><Services /></section>
       <section id="about" ref={aboutRef}><About /></section>

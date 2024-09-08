@@ -22,7 +22,6 @@ export default function NavMobile({ refs }) {
             <BiX size="28px" color="#000" />
           </button>
         </div>
-        <div className='divider' />
         <nav className='mobile-menu-nav'>
           <a href='#home' onClick={(e) => handleClick(e, refs[0]) }>
             <div className='mobile-link'>
