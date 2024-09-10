@@ -1,11 +1,18 @@
+
+import services from '@/assets/services.svg'
+import sectionOne from '@/assets/section-1.svg'
+import SectionHeader from '@/components/section-header'
+import Layout from '@/components/layout'
 import './Contact.sass'
 
-function Contact() {
+export default function Contact() {
+  const left = <SectionHeader img={sectionOne} title="Contact" />
+  const right = <img src={services} alt="Contact" className="section-bg" />
+
   return (
-    <div className="container">
-      
-    </div>
+    <Layout
+      left={left}
+      right={right}
+    />
   )
 }
-
-export default Contact
